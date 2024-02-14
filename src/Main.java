@@ -28,7 +28,7 @@ public class Main {
                 scanner.next();
             }
         }
-
+        System.out.println("try");
         printPerson(name, age);
     }
 
