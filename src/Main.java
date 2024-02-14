@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     /**
-     * Main.java
+     *
      * Author:  Evan VanOostrum
      * Date:    02/14/2024
      */
