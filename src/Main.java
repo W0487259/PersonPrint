@@ -1,38 +1,63 @@
-/**
- * Main.java
- * Author: David Kristiansen (W0242502)
- * Date: 2024-02-14
- * Time: 10:35 a.m.
- * Description:
- */
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * Main.java
+     * Author:  Evan VanOostrum
+     * Date:    02/14/2024
+     */
+
     public static void main(String[] args) {
-        // Prompt user for their name and age
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter your name:");
-        String name = scanner.nextLine();
-
-
-        int age=-1;
+        System.out.print("Please enter your name: ");
+        String name = input.nextLine();
+        int age = -1;
         while (age == -1) {
             try {
-                System.out.println("Please enter your age:");
-                age = scanner.nextInt();
-            } catch (InputMismatchException e) {
+                System.out.print("Enter your age in years: ");
+                age = input.nextInt();
+            }
+            catch (Exception e) {
                 age = -1;
-                System.out.println("Error! Please enter a valid number for age.");
-                scanner.next();
+                System.out.println("Error, please try again.");
+                input.next();
+
+            } catch (StackOverflowError stk) {
+                System.out.println("you broke it lol\n" + stk);
             }
         }
-        System.out.println("try");
+
         printPerson(name, age);
     }
 
     public static void printPerson(String name, int age) {
-        System.out.println("Hi "+ name + "! You are "+ age + " years young!");
+        System.out.println("Name: \t" + name);
+        System.out.println("Age:  \t" + age);
+        System.out.println("Gen:  \t" + getGen(age));
+    }
+
+    public static String getGen(int age) {
+        int bYear = 2024 - age;     // Approx.
+
+        if(bYear > 2012) {
+            return "Gen Alpha";
+        } else if(bYear >= 1997) {
+            return "Gen Z";
+        } else if(bYear >= 1981) {
+            return "Millennial";
+        } else if(bYear >= 1965) {
+            return "Gen X";
+        } else if(bYear >= 1946) {
+            return "Baby Boomer";
+        } else if(bYear >= 1928) {
+            return "Silent Generation";
+        } else if(bYear >= 1901) {
+            return "Greatest Generation";
+        } else if(bYear >= 1883) {
+            return "Lost Generation";
+        } else {
+            return "Error: Person is over 140 years old?!?!?!";
+        }
     }
 }
