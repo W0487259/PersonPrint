@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     /**
-     *
+     * Generation Checker
      * Author:  Evan VanOostrum
      * Date:    02/14/2024
      */
