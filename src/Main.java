@@ -57,7 +57,7 @@ public class Main {
         } else if(bYear >= 1883) {
             return "Lost Generation";
         } else {
-            return "Error: Person is over 140 years old?!?!?!";
+            return "Error: This person is over 140 years old?!";
         }
     }
 }
