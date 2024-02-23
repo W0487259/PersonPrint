@@ -45,7 +45,7 @@ public class Main {
         } else if(bYear >= 1997) {
             return "Gen Z";
         } else if(bYear >= 1981) {
-            return "Millennial";
+            return "Millennial (Gen Y)";
         } else if(bYear >= 1965) {
             return "Gen X";
         } else if(bYear >= 1946) {
