@@ -38,7 +38,7 @@ public class Main {
     }
 
     public static String getGen(int age) {
-        int bYear = 2024 - age;     // Approx.
+        int bYear = 2024 - age;     // Approximate age
 
         if(bYear > 2012) {
             return "Gen Alpha";
