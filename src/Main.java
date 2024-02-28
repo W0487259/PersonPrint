@@ -3,11 +3,16 @@ import java.util.Scanner;
 public class Main {
     /**
      * Generation Checker
-     * Author:  E.V.O.
-     * Date:    02/14/2024
+     * Author:      E.V.O.
+     * Date:        02/14/2024
+     * Last edited: 02/28/2024
      */
 
     public static void main(String[] args) {
+        getGen();
+    }
+
+    public static void getGen() {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Please enter your name: ");
@@ -28,36 +33,32 @@ public class Main {
             }
         }
 
-        printPerson(name, age);
-    }
-
-    public static void printPerson(String name, int age) {
-        System.out.println("Name: \t" + name);
-        System.out.println("Age:  \t" + age);
-        System.out.println("Gen:  \t" + getGen(age));
-    }
-
-    public static String getGen(int age) {
+        String ageGen = "";
         int bYear = 2024 - age;     // Approximate age
 
         if(bYear > 2012) {
-            return "Gen Alpha";
+            ageGen = "Gen Alpha";
         } else if(bYear >= 1997) {
-            return "Gen Z";
+            ageGen = "Gen Z";
         } else if(bYear >= 1981) {
-            return "Millennial (Gen Y)";
+            ageGen = "Millennial (Gen Y)";
         } else if(bYear >= 1965) {
-            return "Gen X";
+            ageGen = "Gen X";
         } else if(bYear >= 1946) {
-            return "Baby Boomer";
+            ageGen = "Baby Boomer";
         } else if(bYear >= 1928) {
-            return "Silent Generation";
+            ageGen = "Silent Generation";
         } else if(bYear >= 1901) {
-            return "Greatest Generation";
+            ageGen = "Greatest Generation";
         } else if(bYear >= 1883) {
-            return "Lost Generation";
+            ageGen = "Lost Generation";
         } else {
-            return "Error: This person is over 140 years old?!";
+            ageGen = "Error: This person is over 140 years old?!";
         }
+
+        System.out.println("Name: \t" + name);
+        System.out.println("Age:  \t" + age);
+        System.out.println("Gen:  \t" + ageGen);
     }
+
 }
