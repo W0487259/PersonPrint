@@ -17,12 +17,12 @@ public class Main {
         sully.scare("Boo");
         System.out.println(randall.getName() + " said, \"go to greenland lol\"");
 
-        Door booDoor = new Door("Blue", "Boo");
+        Door booDoor = new Door("White", "Boo");
         System.out.println(booDoor);
     }
 
     public void destroyDoor(Door door) {
-        System.out.println("Door #");
+        System.out.println("Door #" + door.getDoorId() + " was thrown into the shredder.");
     }
 
     public static void getGen() {

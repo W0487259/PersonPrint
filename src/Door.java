@@ -8,28 +8,29 @@ public class Door {
 
     private String colour;      // Colour
     private String kid;         // Name of the kid that the door is connected to
-    private boolean isActive;   //
-    private final int doorId;
+    private boolean isActive;   // Whether the door is activated or not
+    private final int doorId;   //
 
-    private static int numDoors = 0x0;  // Door IDs are catalogued in Hexadecimal
+    private static int totalDoors = 0x0;  // Door IDs are catalogued in Hexadecimal
 
     public Door(String colour, String kid) {
-        numDoors++;
+        totalDoors++;
         this.colour = colour;
         this.kid = kid;
         this.isActive = false;
-        this.doorId = numDoors;
+        this.doorId = totalDoors;
     }
 
     // ******* Getters *******
     public String getColour() {
         return colour;
     }
-
+    public String getKid() {
+        return kid;
+    }
     public boolean getStatus() {
         return isActive;
     }
-
     public int getDoorId() {
         return doorId;
     }
@@ -50,7 +51,6 @@ public class Door {
     }
 
     // ******* Other methods *******
-
     public void open() {
         if(isActive) {
             System.out.println();
