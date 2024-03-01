@@ -17,6 +17,12 @@ public class Main {
         sully.scare("Boo");
         System.out.println(randall.getName() + " said, \"go to greenland lol\"");
 
+        Door booDoor = new Door("Blue", "Boo");
+        System.out.println(booDoor);
+    }
+
+    public void destroyDoor(Door door) {
+        System.out.println("Door #");
     }
 
     public static void getGen() {
