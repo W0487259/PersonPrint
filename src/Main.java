@@ -2,14 +2,21 @@ import java.util.Scanner;
 
 public class Main {
     /**
-     * Generation Checker
+     * Generation Checker + Monsters Inc
      * Author:      E.V.O.
      * Date:        02/14/2024
-     * Last edited: 02/28/2024
+     * Last edited: 03/01/2024
      */
 
     public static void main(String[] args) {
-        getGen();
+        // getGen();
+
+        Monster randall = new Monster("Randall", "555-555-1234", 8, 2);
+        Monster sully = new Monster("Sully", "972-282-9712", 4);
+
+        sully.scare("Boo");
+        System.out.println(randall.getName() + " said, \"go to greenland lol\"");
+
     }
 
     public static void getGen() {
@@ -33,6 +40,14 @@ public class Main {
             }
         }
 
+        String ageGen = getAgeGen(age);
+
+        System.out.println("Name: \t" + name);
+        System.out.println("Age:  \t" + age);
+        System.out.println("Gen:  \t" + ageGen);
+    }
+
+    private static String getAgeGen(int age) {
         String ageGen = "";
         int bYear = 2024 - age;     // Approximate age
 
@@ -55,10 +70,7 @@ public class Main {
         } else {
             ageGen = "Error: This person is over 140 years old?!";
         }
-
-        System.out.println("Name: \t" + name);
-        System.out.println("Age:  \t" + age);
-        System.out.println("Gen:  \t" + ageGen);
+        return ageGen;
     }
 
 }
