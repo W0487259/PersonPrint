@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Generation Checker + Monsters Inc
  * Author:      E.V.O.
@@ -10,8 +8,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
-
         Monster randall = new Monster("Randall", "555-555-1234", 8, 2);
         Monster sully = new Monster("Sully", "972-282-9712", 4);
         Monster mike = new Monster("Mike", "297-236-0978", 4, 1);
