@@ -1,12 +1,5 @@
 public class Monster {
 
-    /**
-     * Author:      Evan VanOostrum
-     * Last edited: 03/01/2024
-     * Filename:    Monster.java
-     * Purpose:     Monster class
-     */
-
     private String name;
     private final String ssn;
     private int limbs = 4;
@@ -16,7 +9,7 @@ public class Monster {
      * Monster object constructor
      * @param name  Monster's name
      * @param ssn   Social security number
-     * @param limbs # of limbs (arms, legs, etc)
+     * @param limbs # of limbs (arms, legs, etc.)
      * @param eyes  # of eyes
      */
     public Monster(String name, String ssn, int limbs, int eyes) {
